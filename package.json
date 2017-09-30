@@ -1,0 +1,22 @@
+{
+  "name": "ts-sandbox",
+  "version": "1.0.0",
+  "description": "Learn to code in typescript.",
+  "main": "app.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zhi H Li (Mario)",
+  "license": "ISC",
+  "dependencies": {
+    "rxjs": "^5.4.3"
+  },
+  "devDependencies": {
+    "jquery": "^3.2.1",
+    "ts-loader": "^2.3.7",
+    "typescript": "^2.5.2",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2"
+  }
+}
