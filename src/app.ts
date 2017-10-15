@@ -11,17 +11,12 @@ var footer = new Footer();
 
 let fixup = new FixUP('Log this');
 
-
-
 function genColor(num: number): string {
-    let arr = ['red', 'blue', 'green', 'orange', 'brown', 'black', 'purple', 'white', 'grey'];
-
-
-
+    let arr = ['red', 'blue', 'green', 'orange', 'brown', 'black', 'purple', 'white', 'grey',
+        'orange', 'white', 'red', 'green'];
+    
     return arr[num];
 }
-
-
 
 let demo: () => void = () => {
     console.log(`this works like a charm`);
