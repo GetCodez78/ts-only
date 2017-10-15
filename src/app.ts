@@ -17,7 +17,7 @@ function genColor(num: number): string {
     return arr[num];
 }
 
-var test = () => {
+let demo: ()=>void = () => {
     console.log(`this works like a charm`);
 };
 
@@ -26,12 +26,9 @@ footer.yinyang('Mario', 'Luigi', () => {
     fixup.nColor(Cexe);
 });
 
-function createBody() {
-    var body = new content.Body(test);
-    body.render();
-}
 
-createBody();
+let body = new content.Body(demo);  // load dem from the constructor
+
 
 word.BuildMsg('This is from the Header');
 
