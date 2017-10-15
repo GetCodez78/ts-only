@@ -11,11 +11,24 @@ var footer = new Footer();
 
 let fixup = new FixUP('Log this');
 
-function genColor(num: number): string {
+function genColor(num: number): any {
     let arr = ['red', 'blue', 'green', 'orange', 'brown', 'black', 'purple', 'white', 'grey',
-        'orange', 'white', 'red', 'green'];
-    
+        { 'fall': 'orange', 'winter': '#61b8e0', 'summer': 'red', 'spring': 'green' }
+    ];
+
     return arr[num];
+}
+
+function genClr(): any[] {
+    let arr = ['red', 'blue', 'green', 'orange', 'brown', 'black', 'purple', 'white', 'grey',
+        {
+            'fall': 'orange', 'winter': 'white', 'summer': 'red', 'spring': 'green',
+            'days': ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'suday']
+
+        }
+    ];
+
+    return arr;
 }
 
 let demo: () => void = () => {
@@ -23,8 +36,8 @@ let demo: () => void = () => {
 };
 
 footer.yinyang('Mario', 'Luigi', () => {
-    let Cexe = genColor(8);
-    fixup.nColor(Cexe);
+    let Cexe = genColor(9);
+    fixup.nColor(Cexe['winter']);
 });
 
 let body = new content.Body(demo);  // load dem from the constructor
@@ -41,11 +54,23 @@ let obj = {
     }
 }
 
-function Person(list: {}) {
+function Person(list: any) {
     console.log(list);
 }
 
 Person(obj.skills);
+
+function countObj(items: any[]) {
+
+            for (let item in items) {
+            console.log(items[item]);
+        }
+}
+
+let gl = genClr();
+
+countObj(gl);
+
 
 
 
