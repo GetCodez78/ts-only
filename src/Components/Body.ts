@@ -1,7 +1,7 @@
 
 export class Body {
     constructor(func?:()=>void) {
-        this.newFunction(func);
+      this.render();
     }
     render() {
         let content = document.body.innerHTML = `<h1>This is from the Body</h1>`;

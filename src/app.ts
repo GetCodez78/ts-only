@@ -3,6 +3,7 @@ import { FixUP } from "./Components/Header"
 import * as content from "./Components/Body";
 import { Footer } from "./Components/Footer";
 import *  as gn from "./Components/Generic";
+import Closure from "./Components/Closure";
 
 let word = new header();
 
@@ -35,6 +36,7 @@ createBody();
 word.BuildMsg('This is from the Header');
 
 gn.inSpace('This is form the Generic File');
+
 
 
 
