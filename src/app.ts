@@ -1,5 +1,4 @@
-import header from "./Components/Header"
-import { FixUP } from "./Components/Header"
+import header, { FixUP } from "./Components/Header"
 import * as content from "./Components/Body";
 import { Footer } from "./Components/Footer";
 import *  as gn from "./Components/Generic";
@@ -22,7 +21,7 @@ function genColor(num: number): any {
 function genClr(): any[] {
     let arr = ['red', 'blue', 'green', 'orange', 'brown', 'black', 'purple', 'white', 'grey',
         {
-            'fall': 'orange', 'winter': 'white', 'summer': 'red', 'spring': 'green',
+            'fall': 'orange', 'winter': 'frosty', 'summer': 'red', 'spring': 'green',
             'days': ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'suday']
 
         }
@@ -42,7 +41,6 @@ footer.yinyang('Mario', 'Luigi', () => {
 
 let body = new content.Body(demo);  // load dem from the constructor
 
-
 word.BuildMsg('This is from the Header');
 
 gn.inSpace('This is form the Generic File');
@@ -60,16 +58,19 @@ function Person(list: any) {
 
 Person(obj.skills);
 
-function countObj(items: any[]) {
-
-            for (let item in items) {
-            console.log(items[item]);
-        }
-}
-
 let gl = genClr();
 
+function countObj(items: any[]) {
+
+    for (var i = 0; i < gl.length; i++) {
+        typeof gl[i] === 'string' ? console.log(gl[i]) : console.log('thats it folks');
+    }
+
+}
+
 countObj(gl);
+
+
 
 
 
