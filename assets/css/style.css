@@ -1,7 +1,11 @@
 body {
     background-color: rgba(73, 163, 223, 0.781);
-    margin: auto;
+    padding-bottom: 100px;
+}
 
+body > #App {
+    margin: 0 auto;
+    width: 1200px;
 }
 
 .color {

@@ -39,10 +39,7 @@ let demo: () => void = () => {
     console.log(`this works like a charm`);
 };
 
-
 let body = new content.Body(demo);  // load dem from the constructor
-
-
 
 word.BuildMsg('This is from the Header');
 
