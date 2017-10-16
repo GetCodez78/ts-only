@@ -4,6 +4,9 @@ import { Footer } from "./Components/Footer";
 import *  as gn from "./Components/Generic";
 import Closure from "./Components/Closure";
 import ConsoleDemo from "./Components/ConsoleDemo";
+import Products from "./Components/Products";
+import * as functech from "./Components/FuncTech";
+import * as gC from "./Components/GenColor";
 
 let word = new header();
 
@@ -11,26 +14,8 @@ var footer = new Footer();
 
 let fixup = new FixUP('Log this');
 
-function genColor(num: number): any {
-    let arr = ['red', 'blue', 'green', 'orange', 'brown', 'black', 'purple', 'white', 'grey',
-        { 'fall': 'orange', 'winter': '#61b8e0', 'summer': 'red', 'spring': 'green' }
-    ];
-
-    return arr[num];
-}
-
-function genClr(): any[] {
-    let arr = ['red', 'blue', 'green', 'orange', 'brown', 'black', 'purple', 'white', 'grey',
-        {
-            'fall': 'orange', 'winter': 'frosty', 'summer': 'red', 'spring': 'green',
-            'days': ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'suday']
-        }
-    ];
-    return arr;
-}
-
 footer.yinyang('Mario', 'Luigi', () => {
-    let Cexe = genColor(9);
+    let Cexe = gC.genColor(9);
     fixup.nColor(Cexe['winter']);
 });
 
@@ -57,7 +42,7 @@ function Person(list: any) {
 
 Person(obj.skills);
 
-let gl = genClr();
+let gl = gC.genClr();
 
 let ctrigger = new ConsoleDemo();
 
@@ -66,6 +51,12 @@ let cDemo = function callDemos() {
 }
 
 cDemo();
+
+let products = new Products();
+
+products.PhotoList();
+
+let ft = new functech.default(functech.bE);
 
 
 
