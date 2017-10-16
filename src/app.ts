@@ -3,6 +3,7 @@ import * as content from "./Components/Body";
 import { Footer } from "./Components/Footer";
 import *  as gn from "./Components/Generic";
 import Closure from "./Components/Closure";
+import ConsoleDemo from "./Components/ConsoleDemo";
 
 let word = new header();
 
@@ -60,16 +61,13 @@ Person(obj.skills);
 
 let gl = genClr();
 
-function countObj(items: any[]) {
+let listDemo = new ConsoleDemo();
 
-    for (var i = 0; i < gl.length; i++) {
-        typeof gl[i] === 'string' ? console.log(gl[i]) : console.log('thats it folks');
-    }
-
+let cDemo = function callDemos() {
+    listDemo.countObj(gl); listDemo.forEachObj(gl);
 }
 
-countObj(gl);
-
+cDemo();
 
 
 
