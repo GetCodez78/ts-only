@@ -5,12 +5,20 @@ class Header {
         let arr = [];
         let str = 'item';
         for (var n = 0; n < 10; n++) {
-            arr.push(`${'<p>' + msg + [n]}`);
+            arr.push(`${msg + ' ' + [n]}`);
         }
 
         for (var i in arr) {
-            document.write(arr[i]);
+            let elem = document.createElement('h3');
+            let text = document.createTextNode(arr[i]);
+            elem.appendChild(text);
+            let mainElem = document.getElementById('App').appendChild(elem);
         }
+
+        let elem = document.createElement('input');
+        elem.type = 'text';
+        elem.placeholder = 'type your name here';
+        let mainElem = document.getElementById('App').appendChild(elem);
 
     }
 }

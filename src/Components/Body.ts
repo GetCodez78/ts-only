@@ -2,15 +2,22 @@ import Closure from './Closure';
 
 export class Body {
     constructor(func?: () => void) {
-        this.render();
         func();
+        this.render();
     }
 
     render() {
-        let content = document.body.innerHTML = `<h1>This is from the Body</h1>`;
+
         let closure = new Closure();
         closure.test();
-        return content;   
+
+        let elem = document.createElement('h1');
+        let content = document.createTextNode('This is from the Body!!!');
+
+        elem.appendChild(content);
+
+        let mainElem = document.getElementById('App');
+        mainElem.appendChild(elem);
     }
 
 }
