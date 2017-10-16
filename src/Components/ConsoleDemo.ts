@@ -1,6 +1,6 @@
 import iFace from '../Interfaces/iFace';
 
-class ConsoleDemo implements iFace{
+class ConsoleDemo implements iFace {
     firstname: string;
     lastname: string;
     job: string;
@@ -15,7 +15,7 @@ class ConsoleDemo implements iFace{
 
     countObj(items: any[]) {
 
-        for (let i:number = 0; i < items.length; i++) {
+        for (let i: number = 0; i < items.length; i++) {
             typeof items[i] === 'string' ? console.log(items[i]) : console.log('thats it folks');
         }
     }
