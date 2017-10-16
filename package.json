@@ -9,9 +9,7 @@
   },
   "author": "Zhi H Li (Mario)",
   "license": "ISC",
-  "dependencies": {
-    "rxjs": "^5.4.3"
-  },
+  "dependencies": {},
   "devDependencies": {
     "jquery": "^3.2.1",
     "ts-loader": "^2.3.7",
