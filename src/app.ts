@@ -24,28 +24,29 @@ function genClr(): any[] {
         {
             'fall': 'orange', 'winter': 'frosty', 'summer': 'red', 'spring': 'green',
             'days': ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'suday']
-
         }
     ];
-
     return arr;
 }
-
-let demo: () => void = () => {
-    console.log(`this works like a charm`);
-};
 
 footer.yinyang('Mario', 'Luigi', () => {
     let Cexe = genColor(9);
     fixup.nColor(Cexe['winter']);
 });
 
+
+let demo: () => void = () => {
+    console.log(`this works like a charm`);
+};
+
+
 let body = new content.Body(demo);  // load dem from the constructor
+
+
 
 word.BuildMsg('This is from the Header');
 
 gn.inSpace('This is form the Generic File');
-
 
 let obj = {
     firstname: 'mario', lastname: 'li', job: 'trader', skills: {

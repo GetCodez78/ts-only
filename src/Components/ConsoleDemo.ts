@@ -1,4 +1,4 @@
-import iFace from './iFace';
+import iFace from '../Interfaces/iFace';
 
 class ConsoleDemo implements iFace{
     firstname: string;
