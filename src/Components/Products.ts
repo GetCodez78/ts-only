@@ -1,15 +1,17 @@
 
 class Products {
 
+    private photos: string[] = ['ghs.jpg', 'kakashi_baby_c.jpg', 'kakashi_baby.jpg', 'mgs4.jpg'];
+    
     PhotoList() {
 
         let frame = document.createElement('div');
         frame.style.backgroundColor = 'white';
 
-        for (let item in photos) {
+        for (let item in this.photos) {
 
             let photo = document.createElement('img');
-            photo.src = './src/images/' + photos[item];
+            photo.src = './src/images/' + this.photos[item];
             photo.style.width = '30rem';
             photo.style.padding = '5px';
             photo.id = 'Photo' + item;
@@ -24,15 +26,14 @@ class Products {
     }
 
     onClickPhoto() {
-        for (let photo in photos) {
+        for (let photo in this.photos) {
             let ckphoto = document.getElementById('Photo' + photo);
-            ckphoto.onclick = () => confirm(photos[photo] + ' was clicked...');
+            ckphoto.onclick = () => confirm(this.photos[photo] + ' was clicked...');
         }
 
     }
 
 }
 
-let photos: string[] = ['ghs.jpg', 'kakashi_baby_c.jpg', 'kakashi_baby.jpg', 'mgs4.jpg'];
 
 export default Products;
