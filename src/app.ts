@@ -61,10 +61,10 @@ Person(obj.skills);
 
 let gl = genClr();
 
-let listDemo = new ConsoleDemo();
+let ctrigger = new ConsoleDemo();
 
 let cDemo = function callDemos() {
-    listDemo.countObj(gl); listDemo.forEachObj(gl);
+    ctrigger.countObj(gl); ctrigger.forEachObj(gl);
 }
 
 cDemo();
